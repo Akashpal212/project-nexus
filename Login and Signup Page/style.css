@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background.avif') no-repeat;
+    background: url('background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -87,6 +87,7 @@ header {
     position: relative;
     width: 400px;
     height: 440px;
+    margin-top: 50px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
@@ -95,7 +96,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*overflow: hidden;*/
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active { 
+    height: 520px;
 }
 
 .wrapper .form-box {
@@ -104,12 +115,24 @@ header {
 }
 
 .wrapper .form-box.login {
-    /*display: none;*/
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
 }
 
 .wrapper .form-box.register {
     position: absolute;
+    transition: none;
     transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
 
 .wrapper .icon-close {
@@ -232,4 +255,102 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    
+    body {
+        background-position: 30% 20%;
+    }
+    
+    header {
+        margin-left: -40px;
+        margin-top: -20px;
+    }
+    
+    .logo {
+        font-size: 1.2em;
+        color: #fff;
+        user-select: none;
+    }
+
+    .navigation a {
+        font-size: .8em;
+        margin-left: 100px;
+    }
+
+    .navigation .btnLogin-popup {
+        width: 80px;
+        height: 36px;
+        font-size: .8em;
+        margin-left: 100px;
+        margin-top: 5px;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 300px;
+        height: 380px;
+        margin: 50px;
+        top: 65px;
+        font-size: .8em;
+    }
+
+    .wrapper.active { 
+        height: 480px;
+    }
+
+    .form-box h2 {
+        font-size: 1.3em;
+    }
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+
+    body {
+        background-position: 30% 20%;
+    }
+    
+    header {
+        margin-left: -40px;
+        margin-top: -20px;
+    }
+    
+    .logo {
+        font-size: 1.8em;
+        color: #fff;
+        user-select: none;
+    }
+
+    .navigation a {
+        font-size: 1em;
+        margin-left: 170px;
+    }
+
+    .navigation .btnLogin-popup {
+        width: 80px;
+        height: 36px;
+        font-size: 1em;
+        margin-left: 170px;
+        margin-top: 5px;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 300px;
+        height: 340px;
+        margin: 50px;
+        top: 70px;
+        font-size: .8em;
+    }
+
+    .wrapper.active { 
+        height: 480px;
+    }
+
+    .form-box h2 {
+        font-size: 1.3em;
+    }
+
 }
