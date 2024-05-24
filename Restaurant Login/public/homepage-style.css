@@ -1,0 +1,426 @@
+/******** CUSTOM FONTS **********/
+
+@font-face {
+    font-family: "inter state bold";
+    src: url(./fonts/interstateboldcondensed.ttf);
+  }
+  @font-face {
+    font-family: "inter state regular";
+    src: url(./fonts/interstateregularcondensed.ttf);
+  }
+  
+  /******** GLOBAL COLORS **********/
+  :root {
+    --fontred-color: #520802;
+    --buttonred: #6f1100;
+    --fontwhite-color: #fff5e4;
+    --fontfooter-color: #8a7465;
+    --footer-color: #1a1a1a;
+  }
+  
+  /******** SETTING MARGINS / PADDINGS AND SCROLL BEHAVIOR **********/
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /******** HEADER **********/
+  
+  header {
+    background-image: url(./assets/background-image-first.jpg);
+    padding-top: 24px;
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .top-cont {
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 10px 0 10px 0;
+  }
+  .top-cont div {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .6s;
+  }
+  .top-cont div:hover {
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+  }
+  .pg-logo {
+    width: 140px;
+    height: 127;
+  }
+  .reservation-btn {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  
+  .hero-cont {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 1px solid white;
+    width: 80%;
+    min-height: 74vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .welcome-text {
+    color: white;
+    font-size: 60px;
+
+  }
+  
+  .pg-logo-round img {
+    margin-top: 210px;
+    width: 230px;
+  }
+  .hero-btn-cont {
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+  }
+  
+  .menu-btn,
+  .hours-btn {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 5px 50px;
+    font-size: 16px;
+    margin: 10px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "inter state bold", sans-serif;
+    border-radius: 3px;
+  }
+  .down-arrow {
+    margin-top: 30px;
+  }
+  
+  /******** HEADER MEDIA QUERIES **********/
+  
+  /* SMALL DEVICES */
+  @media (max-width: 700px) {
+    .hero-cont {
+      min-height: 85vh;
+    }
+    .pg-logo-round img {
+      margin-top: 100px;
+      width: 230px;
+      height: auto;
+    }
+    .hero-btn-cont {
+      margin-top: 0px;
+    }
+    .menu-btn,
+    .hours-btn {
+      margin: 0;
+    }
+  
+    .down-arrow {
+      margin-top: 50px;
+    }
+  }
+  
+  /* LARGE DEVICES */
+  @media (min-width: 1693px) {
+    .hero-cont {
+      min-height: 90vh;
+    }
+    .pg-logo-round img {
+      margin-top: 410px;
+      width: 400px;
+      height: auto;
+    }
+    .hero-btn-cont {
+      margin-top: 60px;
+    }
+    .down-arrow {
+      margin-top: 100px;
+    }
+  }
+  
+  /******** MENU SECTION **********/
+  
+  .menu {
+    display: flex;
+    background-image: url(./assets/PecanGrill-homepage-intro-background.jpg);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .menu-left {
+    width: 40%;
+    margin-left: 150px;
+    margin-right: 50px;
+  }
+  .menu-right {
+    width: 60%;
+  }
+  .menu-right img {
+    width: 547px;
+  }
+  .menu-list {
+    display: flex;
+    margin-top: 20px;
+    list-style: none;
+    font-family: "inter state regular", sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .menu-list li {
+    padding-right: 30px;
+    margin-top: 30px;
+  }
+  
+  li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--fontred-color);
+  }
+  
+  .active {
+    color: var(--fontred-color);
+    border-bottom: 1px #520802 solid;
+    margin-top: 3px;
+  }
+  .menu-h1 {
+    margin-top: 70px;
+    font-size: 45px;
+    color: var(--fontred-color);
+  }
+  
+  .menu-p {
+    margin: 30px 0;
+    font-size: 20px;
+  }
+  .breakfast-menu-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "inter state bold", sans-serif;
+    background-color: var(--buttonred);
+    color: white;
+    padding: 3px 10px;
+  }
+  
+  /******** MENU MEDIA QUERIES **********/
+  
+  /* SMALL DEVICES */
+  @media (max-width: 700px) {
+    .menu {
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-left {
+      margin: 0;
+  
+      width: 100%;
+    }
+    .menu-right {
+      margin: 80px 0 0 0;
+      width: 100%;
+    }
+    .menu-right img {
+      width: 100%;
+    }
+    .menu-article {
+      padding-left: 40px;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  /* LARGE DEVICES */
+  @media (min-width: 1693px) {
+    .menu-left {
+      width: 60%;
+      margin-left: 450px;
+      margin-right: 50px;
+    }
+  }
+  
+  /******** REVIEWS SECTION **********/
+  
+  .reviews {
+    background-image: linear-gradient(to bottom right, rgb(192, 192, 192), rgb(61, 61, 61));
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cust-review {
+    max-width: 750px;
+  }
+  .arrow-left {
+    align-self: flex-start;
+    position: absolute;
+  }
+  .arrow-right {
+    align-self: flex-end;
+    position: absolute;
+  }
+  .review-heading,
+  .cust-review,
+  .reviewer-cont {
+    color: black;
+  }
+  .review-heading {
+    margin-bottom: 50px;
+    font-family: "inter state bold", sans-serif;
+    text-transform: uppercase;
+  }
+  .cust-review {
+    font-size: 35px;
+    text-align: center;
+    margin: 0 20px;
+  }
+  .reviewer-cont {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  /******** REVIEWS MEDIA QUERIES **********/
+  
+  /* SMALL DEVICES */
+  @media (max-width: 700px) {
+    .cust-review {
+      font-size: 25px;
+      margin: 0 35px;
+    }
+  }
+  
+  /******** FOOTER **********/
+  
+  .footer-cont {
+    background-color: var(--footer-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .footer-logo1,
+  .footer-logo2,
+  .footer-contact,
+  .footer-social {
+    padding: 0 0 0 100px;
+  }
+  
+  .footer-contact {
+    color: var(--fontfooter-color);
+  }
+  .footer-reservations {
+    margin-bottom: 5px;
+  }
+  .footer-phone {
+    margin-bottom: 8px;
+  }
+  .contact-phone {
+    text-decoration: none;
+    color: var(--fontfooter-color);
+  }
+  
+  .footer-address {
+    line-height: 1.4;
+  }
+  
+  .footer-cont2 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .cr-cont {
+    font-family: "inter state regular", sans-serif;
+    text-transform: uppercase;
+    color: var(--fontfooter-color);
+    padding-right: 200px;
+    font-size: 15px;
+  }
+  
+  .pp-cont a,
+  .sm-cont a {
+    font-family: "inter state regular", sans-serif;
+    text-transform: uppercase;
+    color: var(--fontfooter-color);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0 50px;
+  }
+  .pp-cont {
+    border-right: solid #8a7465 1px;
+  }
+  
+  /******** FOOTER MEDIA QUERIES **********/
+  
+  /* SMALL DEVICES */
+  @media (max-width: 700px) {
+    .footer-cont {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
+    .footer-logo1,
+    .footer-logo2,
+    .footer-contact,
+    .footer-social {
+      padding: 20px 0 20px 0;
+    }
+    .footer-contact {
+      text-align: center;
+    }
+    .footer-cont2 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100px;
+    }
+    .cr-cont {
+      margin: 0;
+      padding: 10px 0;
+    }
+    .pp-cont {
+      border-right: 0;
+      padding-bottom: 10px;
+    }
+    .sm-cont {
+      padding-bottom: 10px;
+    }
+  }
+  
